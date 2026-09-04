@@ -1,0 +1,42 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    double a,b,c,d,x1,x2;
+    cout<<"---SOLUCION DE ECUACION CUADRATICA---";
+    cout<<"ingrese a: ";
+    cin>>a;
+    cout<<"ingrese b: ";
+    cin>>b;
+    cout<<"ingrese c: ";
+    cin>>c;
+    if (a==0){
+        cout<<"no es una ecuacion cuadratica"<<endl;
+    }
+    else {
+        d=b*b-4*a*c;
+        if  (d > 0){
+            x1=(-b+sqrt(d)/(2*a));
+            x2=(-b-sqrt(d)/(2*a));
+            cout<<"tiene dos soluciones reales:"<<endl;
+            cout<<"x1= "<<x1<<endl;
+            cout<<"x2= "<<x2<<endl;
+        }
+        else if (d==0){
+        x1=-b/(2*a);
+        cout<<"tiene una solucion real:"<<endl;
+            cout<<"x= "<<x1<<endl;
+        }
+        else {
+            double parteReal=-b/(2*a);
+            double parteImaginaria=sqrt(-d)/(2*a);
+            cout<<"tienes dos soluciones complejas:"<<endl;
+            cout<<"x2= "<< parteReal<<" + "
+                <<parteImaginaria<<"i"<<endl;
+            cout<<"x2= "<< parteReal<<" - "
+                <<parteImaginaria<<"i"<<endl;
+        }
+    }
+    return 0;
+}
