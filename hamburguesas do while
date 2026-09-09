@@ -1,0 +1,63 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int cantidad,opcion, canthamb=0, cantqueso=0, cantpapas=0, cantsoda=0;
+    double cuentaparcial, totalhamb=0, totalqueso=0, totalpapas=0, totalsoda=0 ;
+    cout<<"bienvenido al restaurante.."<<endl;
+    do{
+        cout<<"----Menu----:"<<endl;
+        cout<<"1.hamburguesa (Bs.3)"<<endl;
+        cout<<"2.hamburguesa con queso(Bs.5)"<<endl;
+        cout<<"3.papas fritas(Bs.2)"<<endl;
+        cout<<"4.soda(Bs.2.5)"<<endl;
+        cout<<"0.salir"<<endl;
+        cout<<"que desea pedir? ";
+        cin>>opcion; 
+           switch (opcion){
+              case 1: 
+               cout<<"cuantas hamburguesas desea? ";cin>>cantidad; 
+               canthamb=canthamb+cantidad;
+               cuentaparcial=cantidad*3;
+               totalhamb=totalhamb+cuentaparcial;
+        break;
+        
+         case 2: 
+        cout<<"cuantas hamburguesas con queso desea? ";cin>>cantidad; 
+        canthamb=cantqueso+cantidad;
+        cuentaparcial=cantidad*5;
+        totalqueso=totalqueso+cuentaparcial;
+        break;
+        
+         case 3: 
+        cout<<"cuantas papas fritas desea? ";cin>>cantidad; 
+        cantpapas=cantpapas+cantidad;
+        cuentaparcial=cantidad*2;
+        totalpapas=totalpapas+cuentaparcial;
+        break;
+        
+         case 4: 
+        cout<<"cuantas sodas desea? ";cin>>cantidad; 
+        cantsoda=cantsoda+cantidad;
+        cuentaparcial=cantidad*2.5;
+        totalsoda=totalsoda+cuentaparcial;
+        break;
+        
+         case 0: 
+        cout<<"has salido del menu "<<endl;
+        break;
+        default:
+        cout<<"opcion invalida "<<endl;
+        return 0;
+        }
+    }while(opcion !=0);
+        cout<<"ITEM					CANTIDAD 		TOTAL PARCIAL"<<endl;
+	    cout<<"	Hamburguesas  (3Bs)				" <<"\t"<<canthamb<<"\t"<<   totalhamb<<endl;
+		cout<<"Hamburguesas  con queso ( 5Bs)	" <<"\t"<<cantqueso<<"\t"<<	totalqueso<<endl;
+		cout<<"Papas fritas ( 2Bs)				" <<"\t"<<cantpapas<<"\t"<< totalpapas<<endl;
+		cout<<"Soda	(2.5Bs)					"     <<"\t"<<cantsoda<<"\t"<<       totalsoda<<endl;
+	    cout<<"T O T A L"<<canthamb+cantqueso+cantpapas+cantsoda<<"\t"<< canthamb+cantqueso+cantpapas+cantsoda<<endl;
+    
+    cout<<"el total de tu cuenta es: "<<cuentaparcial<<"Bs. ";
+    return 0;
+}
