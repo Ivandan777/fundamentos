@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cmath> 
+using namespace std;
+int main() {
+    char respuesta;
+    do {
+        long long n;
+        cout << "\n-----------------------------------" << endl;
+        cout << "Ingrese un numero entero N: ";
+        cin >> n;
+
+        long long numeroTemp = abs(n); 
+        int suma = 0;
+      
+        while (numeroTemp > 0) {
+            int digito = numeroTemp % 10; 
+            suma += digito;             
+            numeroTemp /= 10;           
+        }
+
+        cout << "La suma de los digitos de " << n << " es: " << suma << endl;
+        cout << "-----------------------------------" << endl;
+
+        cout << "?Desea ingresar otro numero? (s/n): ";
+        cin >> respuesta;
+
+    } while (respuesta == 's' || respuesta == 'S');
+
+    cout << "\n¡Gracias por usar el programa!" << endl;
+    return 0;
+}
