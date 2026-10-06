@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    int n, nabs, c=0,r;
+    cout<<"introduce un numero entero: ";
+    cin>>n;
+    nabs=abs(n);
+    
+        while(nabs>0)
+        {
+        
+            r=nabs%10;
+            c=c+r;
+            nabs=nabs/10;
+        
+        }
+    cout<<"la suma es: "<<endl<<c;
+    return 0;
+}
