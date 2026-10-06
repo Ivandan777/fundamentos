@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main ()
+ {
+    
+   int n, nabs, digito, res=0; 
+   cout<< "introduce un numero entero: ";
+   cin>> n; 
+   nabs = abs(n);
+   while    (nabs>0)
+   {
+    digito = nabs % 10;
+    res = (res * 10) + digito;
+    nabs /= 10;
+       
+   }
+    cout <<"su inverso es: "<<endl<<res;
+ }
