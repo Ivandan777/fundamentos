@@ -1,0 +1,91 @@
+/******************************************************************************
+5.	Calcular el producto de los primeros N números enteros.
+	P= 1x2x3x........xN
+*******************************************************************************/
+#include <iostream>
+using namespace std; 
+int main()
+{
+    int n,i,mult=1;
+    cout<< "introduce un numero entero: ";
+    cin>>n;
+    for (i=1;i<=n;i++)
+    {
+        mult= mult*i;
+        
+    }
+    cout<<"el producto desde 1 hasta "<< n <<" es "<<mult;
+    return 0;
+}
+//6.	Calcular la siguiente serie, donde X es un número real.
+//	S=x^1+x^2+x^3+⋯…………+x^n
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+ float x;
+ float i,pot=1,sum=0,n;
+ 
+ cout<<"introduce el valor de el indice: ";
+ cin>>n;
+ cout<<"introduce el valor de el coeficiente: ";
+ cin>>x;
+ 
+ for(i=1;i<=n;i++)
+ {
+    pot=pow(x,i);
+    sum=sum+pot;
+ }
+cout<<"la suma total es: "<<sum;
+    return 0;
+}
+
+/******************************************************************************
+7.	Calcular el factorial de un número entero N. Donde se define 
+como factorial de la siguiente forma: FAC(N) = 1x2x3x.....xN; donde el factorial de cero
+es uno  (FAC(0) =1).  FAC(N)=N!, se lee factorial (!) de N.
+*******************************************************************************/
+#include <iostream>
+using namespace std; 
+int main()
+{
+    int n,i,fact=1;
+    cout<< "introduce un numero entero: ";
+    cin>>n;
+    if (n==0)
+    cout<<"FAC ("<< n <<") = "<<"1"; 
+    else
+    {
+    for (i=1;i<=n;i++)
+       {
+           fact= fact*i;
+        
+       }
+    cout<<"FAC ("<< n <<") = "<<fact<<"!";
+    }
+    return 0;
+//8.	Calcular la siguiente serie:
+//		S= X/1! + X^2/2! + X^3/3! + ........X^n/n!
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    float x, suma = 0;
+    float fact = 1;
+    int n, i;
+    cout << "Introduce el coeficiente del numerador (x): ";
+    cin >> x;
+    cout << "Introduce el limite n de la serie: ";
+    cin >> n;
+    for (i = 1; i <= n; i++)
+    {
+        fact = fact * i; 
+        suma = suma + (pow(x, i) / fact); 
+    }
+    cout << "El resultado total de la serie es: " << suma << endl;
+    return 0;
+}
+}
