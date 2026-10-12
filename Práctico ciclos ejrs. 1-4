@@ -1,0 +1,76 @@
+/******************************************************************************
+1.	Suma de los números enteros entre 1 y N.
+	S=1+2+3+⋯…………+N
+*******************************************************************************/
+#include <iostream>
+using namespace std; 
+int main() {
+    int n,suma=0,i; 
+    cout<<"introduce un número entero: ";
+    cin>>n;
+    for (i=1;i<=n;i=i+1)
+    {
+     suma = suma+i;
+    
+    }
+    cout<<"la suma de su numero es: "<< suma;
+    return 0;
+}
+//2.	Suma de los números enteros impares comprendidos entre 1 y N.
+//	S=1+3+5+⋯…………+N 
+#include <iostream>
+using namespace std;
+int main()
+{
+ int suma=0, i, n;
+ cout<<"introduce un numero entero: ";
+ cin>>n;
+        for (i=1;i<=n;i=i+2)
+        {
+            suma= suma+i;
+        }
+    cout<< "la suma de sus numero impares hasta "<<n<<" es "<<suma;
+ return 0;
+}
+/*
+3.	Suma de los cuadrados de los primeros N números enteros.
+	S=1^2+2^2+3^2+⋯…………+N^2
+*/
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+ int suma=0, i, n;
+ cout<<"introduce un numero entero: ";
+ cin>>n;
+        for (i=1; i<=n; i=i + 1)
+        {
+
+            suma= suma+pow(i, 2);
+            
+        }
+    cout<< "la suma de los cuadrados hasta "<<n<<" es "<<suma;
+ return 0;
+}
+/*
+4.	Calcular la siguiente suma
+	S= 1 - 2 + 3 - 4 + 5 - .........+/- N.
+*/
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+ int suma=0, i, n;
+ cout<<"introduce un numero entero: ";
+ cin>>n;
+        for (i=1; i<=n; i=i + 1)
+        {
+
+            suma= suma-i*(pow(-1,i));
+            
+        }
+    cout<< "la suma de los numero alternando signo hasta "<<n<<" es "<<suma;
+ return 0;
+}
