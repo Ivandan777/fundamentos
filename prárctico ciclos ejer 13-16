@@ -1,0 +1,26 @@
+//13.	Hacer un programa que imprima la tabla de sumar 
+//decimal (1 al 10), en el formato que usted elija.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int opcion, i;
+
+    cout << "Que tabla de sumar desea ver (1 al 10): ";
+    cin >> opcion;
+
+    if (opcion >= 1 && opcion <= 10)
+    {
+        for (i = 1; i <= 10; i++)
+        {
+            cout << opcion << " + " << i << " = " << opcion + i << endl;
+        }
+    }
+    else
+    {
+        cout << "No existe dicha tabla." << endl;
+    }
+
+    return 0;
+}
