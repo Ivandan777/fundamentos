@@ -1,0 +1,101 @@
+//9.	Calcular la siguiente serie:
+//		S= X/1! - X^2/2! + X^3/3! - ........(+/-)X^n/n!
+
+#include <iostream> 
+#include <cmath>
+using namespace std; 
+int main()
+{
+    float x,suma = 0,fact = 1;
+    int i, n;
+    cout<< "introduce numerador (x): ";
+    cin>> x; 
+    cout <<"introduce factorial denomiador, indice de x y limite de la serie: ";
+    cin>> n; 
+    for(i=1;i<=n;i++)
+    {
+        fact = fact * i;
+        suma = suma + (pow(-1,i) * (-(pow (x,i) / fact)));
+    }
+    cout<< "=" << suma;
+  return 0;
+}
+//10.	Calcular la siguiente serie:
+//		S= X/1! -  X^3/3! + X^5/5! - .......(+/-)X^n/n!;  n es impar
+
+#include <iostream> 
+#include <cmath>
+using namespace std; 
+int main()
+{
+    float x,suma = 0, signo =1;
+    int i, n, y;
+    cout<< "introduce numerador (x): ";
+    cin>> x; 
+    cout <<"introduce factorial denomiador, indice de x y limite de la serie (impar): ";
+    cin>> n; 
+    for(i=1;i<=n;i=i+2)
+    {
+        float fact = 1;
+        for (y=1;y<=i;y++)
+        {
+         fact = fact * y;  
+        }
+        suma = suma + signo * (pow (x,i) / fact);
+             signo = signo * -1;
+    }
+    cout<< "el resultado de la serie es " << suma;
+  return 0;
+//11.	Hacer un programa para calcular el MCD
+//(máximo común divisor) de dos números enteros, 
+//usando el algoritmo de Euclides.
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    int a, b, residuo;
+    cout << "Ingrese el numero entero mayor : ";
+    cin >> a;
+    cout << "Ingrese el numero entero menor: ";
+    cin >> b;
+    if (a < 0) a = abs(a);
+    if (b < 0) b = abs(b);
+    while (b != 0)
+    {
+        residuo = a % b;
+        a = b;
+        b = residuo;
+    }
+    cout << "El Maximo Comun Divisor (MCD) es: " << a << endl;
+    return 0;
+}
+//12.	Hacer un programa para calcular el MCM (mín común múlt) 
+//de dos números enteros, donde MCM= (AxB)/MCD.
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    int a, b, a2, b2, residuo, mcm;
+    cout << "Ingrese el numero entero mayor : ";
+    cin >> a2;
+    cout << "Ingrese el numero entero menor: ";
+    cin >> b2;
+    a=a2;
+    b=b2;
+    if (a < 0) a = abs(a);
+    if (b < 0) b = abs(b);
+    while (b != 0)
+    {
+        residuo = a % b;
+        a = b;
+        b = residuo;
+    }
+    mcm=(a2*b2)/a;
+    cout << "el mcd es "<< a <<endl;
+    cout << "El Maximo Comun Divisor (MCD) es: " << mcm;
+    return 0;
+}
+
+}
